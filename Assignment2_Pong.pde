@@ -4,7 +4,7 @@ class Paddle {
   float radius;
   color c;
 
-  Paddle(int pos) {
+  Paddle(float pos) {
     x=pos;
     y=random(height);
     radius=10;
@@ -23,10 +23,6 @@ class Paddle {
       vy=-vy;
     }
   }
-}
-
-void setup() {
-  size(500, 500);
 }
 
 class Ball {
@@ -63,7 +59,11 @@ class Ball {
 
 Ball b = new Ball();
 Paddle p = new Paddle(10);
-Paddle p2 = new Paddle(475);
+Paddle p2 = new Paddle (475);
+
+void setup() {
+  size(500, 500);
+}
 
 void draw() {
   noStroke();
